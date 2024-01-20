@@ -27,7 +27,21 @@ public class Hero {
         dead = false;
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
+    public void setName(String _name){this.name = _name;}
 
+    public void setHitPoint(int _hitPoint){hitPoint = _hitPoint;}
+
+    public void setAttack(int _attack){this.attack = _attack;}
+
+    public void setDead(boolean _dead){dead = _dead;}
+
+    public String getName(){return this.name;}
+
+    public int getHitPoint(){return hitPoint;}
+
+    public int getAttack(){return this.attack;}
+    
+    public boolean getDead(){return dead;}
     /**
      * Enemyへ攻撃するメソッド。
      * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
@@ -35,7 +49,7 @@ public class Hero {
      */
     public void attack(Enemy e){
         int damage = (int)(Math.random() * attack);
-        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.name, damage);
+        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.getName(), damage);
         e.wounded(damage);
     }
 

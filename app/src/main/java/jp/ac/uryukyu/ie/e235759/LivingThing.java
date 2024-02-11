@@ -36,4 +36,8 @@ public class LivingThing {
             System.out.printf("%sは倒れてしまった。\n", name);
         }
     }
+    public void attackWithWeponSkill(Enemy enemy) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'attackWithWeponSkill'");
+    }
 }
